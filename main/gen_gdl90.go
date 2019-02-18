@@ -666,7 +666,7 @@ func makeFFIDMessage() []byte {
 	}
 	copy(msg[11:], devShortName)
 
-	devLongName := fmt.Sprintf("%s-%s", stratuxVersion, stratuxBuild)
+	devLongName := "Stratux"
 	if len(devLongName) > 16 {
 		devLongName = devLongName[:16] // 16 chars.
 	}
