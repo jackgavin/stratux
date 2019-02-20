@@ -15,7 +15,7 @@ sudo su -
 cd /root/
 wget https://dl.google.com/go/go1.10.4.linux-armv6l.tar.gz
 tar -zxvf go1.10.4.linux-armv6l.tar.gz
-git clone --recursive https://github.com/cyoung/stratux
+git clone --recursive https://github.com/jackgavin/stratux
 cd stratux
 service stratux stop
 make
