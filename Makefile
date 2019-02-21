@@ -46,11 +46,11 @@ install:
 	cp image/10-stratux.rules /etc/udev/rules.d/10-stratux.rules
 	cp image/99-uavionix.rules /etc/udev/rules.d/99-uavionix.rules
 	rm -f /etc/init.d/stratux
-	# cp __lib__systemd__system__stratux.service /lib/systemd/system/stratux.service
+	cp __lib__systemd__system__stratux.service /lib/systemd/system/stratux.service
 	cp __root__stratux-pre-start.sh /root/stratux-pre-start.sh
-	# chmod 644 /lib/systemd/system/stratux.service
+	chmod 644 /lib/systemd/system/stratux.service
 	chmod 744 /root/stratux-pre-start.sh
-	# ln -fs /lib/systemd/system/stratux.service /etc/systemd/system/multi-user.target.wants/stratux.service
+	ln -fs /lib/systemd/system/stratux.service /etc/systemd/system/multi-user.target.wants/stratux.service
 	make www
 	cp -f libdump978.so /usr/lib/libdump978.so
 	cp -f dump1090/dump1090 /usr/bin/
