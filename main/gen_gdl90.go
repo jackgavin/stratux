@@ -660,13 +660,13 @@ func makeFFIDMessage() []byte {
 	for i := 3; i <= 10; i++ {
 		msg[i] = 0xFF
 	}
-	devShortName := "Stratux" // Temporary. Will be populated in the future with other names.
+	devShortName := "SafeAid" // Temporary. Will be populated in the future with other names.
 	if len(devShortName) > 8 {
 		devShortName = devShortName[:8] // 8 chars.
 	}
 	copy(msg[11:], devShortName)
 
-	devLongName := "Stratux"
+	devLongName := "Jack's SafeAid"
 	if len(devLongName) > 16 {
 		devLongName = devLongName[:16] // 16 chars.
 	}
